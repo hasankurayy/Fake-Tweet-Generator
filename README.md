@@ -8,12 +8,12 @@ You can generate fake tweets using this site. After filling in information such 
 
 # Libraries Used
 
-for take a screenshot
+to take a screenshot
 `npm i --force use-react-screenshot@3.0.0`
 
-for using scss format
+to using scss format
 `npm i sass`
 
-for deploying
+to deploying
 `npm i surge`
 
