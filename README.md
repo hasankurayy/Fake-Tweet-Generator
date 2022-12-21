@@ -1,6 +1,6 @@
 # Run The Project
 
-To run the project click the [link](https://faketweetgeneratorhkurayy.surge.sh)
+To run the project click the [link](https://faketweetgeneratorhkurayyy.surge.sh)
 
 # Description
 
