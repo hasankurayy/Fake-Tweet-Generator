@@ -14,7 +14,7 @@ function App() {
 
     const [name, setName] = useState()
     const [username, setUsername] = useState()
-    const [isVerified, setIsVerified] = useState(false)
+    const [isVerified, setIsVerified] = useState("false")
     const [tweet, setTweet] = useState()
     const [avatar, setAvatar] = useState()
     const [retweets, setRetweets] = useState(0)
@@ -43,6 +43,11 @@ function App() {
         reader.readAsDataURL(file)
     }
 
+    const handleChange = (e) => {
+        console.log(typeof(isVerified))
+        setIsVerified(e.target._valueTracker.getValue())
+    }
+
     return (
         <>
             <div className="tweet-settings">
@@ -55,6 +60,14 @@ function App() {
                     <li>
                         <label>Kullanıcı Adı</label>
                         <input onChange={e => setUsername(e.target.value)} type="text" />
+                    </li>
+                    <li>
+                        <label>Doğrulanmış</label>
+                        <input
+                            style={{width: "15px", marginLeft: "5px", borderBottom: "1px solid #2f3336", marginBottom: "20px"}} 
+                            onChange={handleChange} 
+                            type="checkbox" />
+                        <hr />
                     </li>
                     <li>
                         <label>Tweet</label>
@@ -96,7 +109,7 @@ function App() {
                         <div>
                             <div className="name">
                                 {name || "Ad-Soyad"}
-                                {isVerified && <VerifiedIcon />}
+                                {isVerified === "true" && <VerifiedIcon />}
                             </div>
                             <div className="username">@{username || "kullaniciadi"}</div>
                         </div>
