@@ -44,14 +44,19 @@ function App() {
     }
 
     const handleChange = (e) => {
-        console.log(typeof(isVerified))
+        console.log(typeof (isVerified))
         setIsVerified(e.target._valueTracker.getValue())
     }
 
     return (
         <>
             <div className="tweet-settings">
-                <h3>Tweet Ayarları</h3>
+                <div className="header-row-1">
+                    <div className="logo-mine">
+                        <a href="#">HKRY</a>
+                    </div>
+                    <h3>Tweet Ayarları</h3>
+                </div>
                 <ul>
                     <li>
                         <label>Ad Soyad</label>
@@ -64,8 +69,8 @@ function App() {
                     <li>
                         <label>Doğrulanmış</label>
                         <input
-                            style={{width: "15px", marginLeft: "5px", borderBottom: "1px solid #2f3336", marginBottom: "20px"}} 
-                            onChange={handleChange} 
+                            style={{ width: "15px", marginLeft: "5px", borderBottom: "1px solid #2f3336", marginBottom: "20px" }}
+                            onChange={handleChange}
                             type="checkbox" />
                         <hr />
                     </li>
